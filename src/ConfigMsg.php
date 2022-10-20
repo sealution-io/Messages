@@ -28,7 +28,7 @@ class ConfigMsg extends \Google\Protobuf\Internal\Message
      * }
      */
     public function __construct($data = NULL) {
-        \Sealution\Messages\Mainmessage::initOnce();
+        \GPBMetadata\Mainmessage::initOnce();
         parent::__construct($data);
     }
 
