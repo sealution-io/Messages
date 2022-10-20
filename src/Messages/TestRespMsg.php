@@ -26,7 +26,7 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $msg_type
-     *     @type \Sealution/Messages\TestThroughPutRespMsg $test_throughput_resp
+     *     @type \Sealution\Messages\TestThroughPutRespMsg $test_throughput_resp
      * }
      */
     public function __construct($data = NULL) {
@@ -50,7 +50,7 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
      */
     public function setMsgType($var)
     {
-        GPBUtil::checkEnum($var, \Sealution/Messages\TestRespMsg_eMsgType::class);
+        GPBUtil::checkEnum($var, \Sealution\Messages\TestRespMsg_eMsgType::class);
         $this->msg_type = $var;
 
         return $this;
@@ -58,7 +58,7 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestThroughPutRespMsg test_throughput_resp = 2;</code>
-     * @return \Sealution/Messages\TestThroughPutRespMsg
+     * @return \Sealution\Messages\TestThroughPutRespMsg
      */
     public function getTestThroughputResp()
     {
@@ -67,12 +67,12 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestThroughPutRespMsg test_throughput_resp = 2;</code>
-     * @param \Sealution/Messages\TestThroughPutRespMsg $var
+     * @param \Sealution\Messages\TestThroughPutRespMsg $var
      * @return $this
      */
     public function setTestThroughputResp($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TestThroughPutRespMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestThroughPutRespMsg::class);
         $this->writeOneof(2, $var);
 
         return $this;

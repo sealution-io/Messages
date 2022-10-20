@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GPBMetadata\\": "src/GPBMetadata/",
+            "GPBMetadata\\": "src/GPBMetadata",
             "Sealution\\Messages\\": "src/Messages"
         }
     }

@@ -26,8 +26,8 @@ class TestMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $msg_type
-     *     @type \Sealution/Messages\TestThroughPutMsg $test_throughput
-     *     @type \Sealution/Messages\TestRestartDeviceMsg $test_restart_device
+     *     @type \Sealution\Messages\TestThroughPutMsg $test_throughput
+     *     @type \Sealution\Messages\TestRestartDeviceMsg $test_restart_device
      * }
      */
     public function __construct($data = NULL) {
@@ -51,7 +51,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
      */
     public function setMsgType($var)
     {
-        GPBUtil::checkEnum($var, \Sealution/Messages\TestMsg_eMsgType::class);
+        GPBUtil::checkEnum($var, \Sealution\Messages\TestMsg_eMsgType::class);
         $this->msg_type = $var;
 
         return $this;
@@ -59,7 +59,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestThroughPutMsg test_throughput = 2;</code>
-     * @return \Sealution/Messages\TestThroughPutMsg
+     * @return \Sealution\Messages\TestThroughPutMsg
      */
     public function getTestThroughput()
     {
@@ -68,12 +68,12 @@ class TestMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestThroughPutMsg test_throughput = 2;</code>
-     * @param \Sealution/Messages\TestThroughPutMsg $var
+     * @param \Sealution\Messages\TestThroughPutMsg $var
      * @return $this
      */
     public function setTestThroughput($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TestThroughPutMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestThroughPutMsg::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -81,7 +81,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestRestartDeviceMsg test_restart_device = 3;</code>
-     * @return \Sealution/Messages\TestRestartDeviceMsg
+     * @return \Sealution\Messages\TestRestartDeviceMsg
      */
     public function getTestRestartDevice()
     {
@@ -90,12 +90,12 @@ class TestMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestRestartDeviceMsg test_restart_device = 3;</code>
-     * @param \Sealution/Messages\TestRestartDeviceMsg $var
+     * @param \Sealution\Messages\TestRestartDeviceMsg $var
      * @return $this
      */
     public function setTestRestartDevice($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TestRestartDeviceMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestRestartDeviceMsg::class);
         $this->writeOneof(3, $var);
 
         return $this;

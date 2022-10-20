@@ -42,5 +42,5 @@ class eMsgType
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(eMsgType::class, \Sealution/Messages\TestRespMsg_eMsgType::class);
+class_alias(eMsgType::class, \Sealution\Messages\TestRespMsg_eMsgType::class);
 

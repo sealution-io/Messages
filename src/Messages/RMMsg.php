@@ -36,7 +36,7 @@ class RMMsg extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $date_time
      *     @type string $mac_address
      *     @type int $msg_type
-     *     @type \Sealution/Messages\SensorDataMsg $sensor_data
+     *     @type \Sealution\Messages\SensorDataMsg $sensor_data
      * }
      */
     public function __construct($data = NULL) {
@@ -104,7 +104,7 @@ class RMMsg extends \Google\Protobuf\Internal\Message
      */
     public function setMsgType($var)
     {
-        GPBUtil::checkEnum($var, \Sealution/Messages\RMMsg_eMsgType::class);
+        GPBUtil::checkEnum($var, \Sealution\Messages\RMMsg_eMsgType::class);
         $this->msg_type = $var;
 
         return $this;
@@ -112,7 +112,7 @@ class RMMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SensorDataMsg sensor_data = 4;</code>
-     * @return \Sealution/Messages\SensorDataMsg
+     * @return \Sealution\Messages\SensorDataMsg
      */
     public function getSensorData()
     {
@@ -121,12 +121,12 @@ class RMMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SensorDataMsg sensor_data = 4;</code>
-     * @param \Sealution/Messages\SensorDataMsg $var
+     * @param \Sealution\Messages\SensorDataMsg $var
      * @return $this
      */
     public function setSensorData($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\SensorDataMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\SensorDataMsg::class);
         $this->writeOneof(4, $var);
 
         return $this;

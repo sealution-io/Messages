@@ -26,16 +26,16 @@ class MainMsg extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $msg_type
-     *     @type \Sealution/Messages\SetTimeMsg $set_time
-     *     @type \Sealution/Messages\GetTimeMsg $get_time
-     *     @type \Sealution/Messages\TimeMsg $time
-     *     @type \Sealution/Messages\HeartBeatMsg $heartbeat
-     *     @type \Sealution/Messages\SetConfigMsg $set_config
-     *     @type \Sealution/Messages\GetConfigMsg $get_config
-     *     @type \Sealution/Messages\ConfigMsg $config
-     *     @type \Sealution/Messages\TestMsg $test
-     *     @type \Sealution/Messages\TestRespMsg $test_resp
-     *     @type \Sealution/Messages\RMMsg $rm
+     *     @type \Sealution\Messages\SetTimeMsg $set_time
+     *     @type \Sealution\Messages\GetTimeMsg $get_time
+     *     @type \Sealution\Messages\TimeMsg $time
+     *     @type \Sealution\Messages\HeartBeatMsg $heartbeat
+     *     @type \Sealution\Messages\SetConfigMsg $set_config
+     *     @type \Sealution\Messages\GetConfigMsg $get_config
+     *     @type \Sealution\Messages\ConfigMsg $config
+     *     @type \Sealution\Messages\TestMsg $test
+     *     @type \Sealution\Messages\TestRespMsg $test_resp
+     *     @type \Sealution\Messages\RMMsg $rm
      * }
      */
     public function __construct($data = NULL) {
@@ -59,7 +59,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
      */
     public function setMsgType($var)
     {
-        GPBUtil::checkEnum($var, \Sealution/Messages\MainMsg_eMsgType::class);
+        GPBUtil::checkEnum($var, \Sealution\Messages\MainMsg_eMsgType::class);
         $this->msg_type = $var;
 
         return $this;
@@ -67,7 +67,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SetTimeMsg set_time = 2;</code>
-     * @return \Sealution/Messages\SetTimeMsg
+     * @return \Sealution\Messages\SetTimeMsg
      */
     public function getSetTime()
     {
@@ -76,12 +76,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SetTimeMsg set_time = 2;</code>
-     * @param \Sealution/Messages\SetTimeMsg $var
+     * @param \Sealution\Messages\SetTimeMsg $var
      * @return $this
      */
     public function setSetTime($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\SetTimeMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\SetTimeMsg::class);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -89,7 +89,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.GetTimeMsg get_time = 3;</code>
-     * @return \Sealution/Messages\GetTimeMsg
+     * @return \Sealution\Messages\GetTimeMsg
      */
     public function getGetTime()
     {
@@ -98,12 +98,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.GetTimeMsg get_time = 3;</code>
-     * @param \Sealution/Messages\GetTimeMsg $var
+     * @param \Sealution\Messages\GetTimeMsg $var
      * @return $this
      */
     public function setGetTime($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\GetTimeMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\GetTimeMsg::class);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -111,7 +111,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TimeMsg time = 4;</code>
-     * @return \Sealution/Messages\TimeMsg
+     * @return \Sealution\Messages\TimeMsg
      */
     public function getTime()
     {
@@ -120,12 +120,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TimeMsg time = 4;</code>
-     * @param \Sealution/Messages\TimeMsg $var
+     * @param \Sealution\Messages\TimeMsg $var
      * @return $this
      */
     public function setTime($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TimeMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TimeMsg::class);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -133,7 +133,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.HeartBeatMsg heartbeat = 5;</code>
-     * @return \Sealution/Messages\HeartBeatMsg
+     * @return \Sealution\Messages\HeartBeatMsg
      */
     public function getHeartbeat()
     {
@@ -142,12 +142,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.HeartBeatMsg heartbeat = 5;</code>
-     * @param \Sealution/Messages\HeartBeatMsg $var
+     * @param \Sealution\Messages\HeartBeatMsg $var
      * @return $this
      */
     public function setHeartbeat($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\HeartBeatMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\HeartBeatMsg::class);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -155,7 +155,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SetConfigMsg set_config = 6;</code>
-     * @return \Sealution/Messages\SetConfigMsg
+     * @return \Sealution\Messages\SetConfigMsg
      */
     public function getSetConfig()
     {
@@ -164,12 +164,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.SetConfigMsg set_config = 6;</code>
-     * @param \Sealution/Messages\SetConfigMsg $var
+     * @param \Sealution\Messages\SetConfigMsg $var
      * @return $this
      */
     public function setSetConfig($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\SetConfigMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\SetConfigMsg::class);
         $this->writeOneof(6, $var);
 
         return $this;
@@ -177,7 +177,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.GetConfigMsg get_config = 7;</code>
-     * @return \Sealution/Messages\GetConfigMsg
+     * @return \Sealution\Messages\GetConfigMsg
      */
     public function getGetConfig()
     {
@@ -186,12 +186,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.GetConfigMsg get_config = 7;</code>
-     * @param \Sealution/Messages\GetConfigMsg $var
+     * @param \Sealution\Messages\GetConfigMsg $var
      * @return $this
      */
     public function setGetConfig($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\GetConfigMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\GetConfigMsg::class);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -199,7 +199,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.ConfigMsg config = 8;</code>
-     * @return \Sealution/Messages\ConfigMsg
+     * @return \Sealution\Messages\ConfigMsg
      */
     public function getConfig()
     {
@@ -208,12 +208,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.ConfigMsg config = 8;</code>
-     * @param \Sealution/Messages\ConfigMsg $var
+     * @param \Sealution\Messages\ConfigMsg $var
      * @return $this
      */
     public function setConfig($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\ConfigMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\ConfigMsg::class);
         $this->writeOneof(8, $var);
 
         return $this;
@@ -221,7 +221,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestMsg test = 9;</code>
-     * @return \Sealution/Messages\TestMsg
+     * @return \Sealution\Messages\TestMsg
      */
     public function getTest()
     {
@@ -230,12 +230,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestMsg test = 9;</code>
-     * @param \Sealution/Messages\TestMsg $var
+     * @param \Sealution\Messages\TestMsg $var
      * @return $this
      */
     public function setTest($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TestMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestMsg::class);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -243,7 +243,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestRespMsg test_resp = 10;</code>
-     * @return \Sealution/Messages\TestRespMsg
+     * @return \Sealution\Messages\TestRespMsg
      */
     public function getTestResp()
     {
@@ -252,12 +252,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.TestRespMsg test_resp = 10;</code>
-     * @param \Sealution/Messages\TestRespMsg $var
+     * @param \Sealution\Messages\TestRespMsg $var
      * @return $this
      */
     public function setTestResp($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\TestRespMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestRespMsg::class);
         $this->writeOneof(10, $var);
 
         return $this;
@@ -265,7 +265,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.RMMsg rm = 11;</code>
-     * @return \Sealution/Messages\RMMsg
+     * @return \Sealution\Messages\RMMsg
      */
     public function getRm()
     {
@@ -274,12 +274,12 @@ class MainMsg extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.RMMsg rm = 11;</code>
-     * @param \Sealution/Messages\RMMsg $var
+     * @param \Sealution\Messages\RMMsg $var
      * @return $this
      */
     public function setRm($var)
     {
-        GPBUtil::checkMessage($var, \Sealution/Messages\RMMsg::class);
+        GPBUtil::checkMessage($var, \Sealution\Messages\RMMsg::class);
         $this->writeOneof(11, $var);
 
         return $this;
