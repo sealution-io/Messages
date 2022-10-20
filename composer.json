@@ -1,5 +1,5 @@
 {
-    "name": "sealution-io/messages",
+    "name": "sealution/messages",
     "type": "library",
     "require": {
         "protobuf-php/protobuf": "^0.1.3"
