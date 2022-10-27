@@ -33,6 +33,18 @@ class MQTTSensorDataMsg extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes data = 5;</code>
      */
     protected $data = '';
+    /**
+     * Generated from protobuf field <code>bytes mac_bt = 6;</code>
+     */
+    protected $mac_bt = '';
+    /**
+     * Generated from protobuf field <code>bytes mac_rm = 7;</code>
+     */
+    protected $mac_rm = '';
+    /**
+     * Generated from protobuf field <code>bytes mac_cm = 8;</code>
+     */
+    protected $mac_cm = '';
 
     /**
      * Constructor.
@@ -45,6 +57,9 @@ class MQTTSensorDataMsg extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $date_time_cm
      *     @type int $rssi
      *     @type string $data
+     *     @type string $mac_bt
+     *     @type string $mac_rm
+     *     @type string $mac_cm
      * }
      */
     public function __construct($data = NULL) {
@@ -158,6 +173,72 @@ class MQTTSensorDataMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_bt = 6;</code>
+     * @return string
+     */
+    public function getMacBt()
+    {
+        return $this->mac_bt;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_bt = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMacBt($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->mac_bt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_rm = 7;</code>
+     * @return string
+     */
+    public function getMacRm()
+    {
+        return $this->mac_rm;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_rm = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMacRm($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->mac_rm = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_cm = 8;</code>
+     * @return string
+     */
+    public function getMacCm()
+    {
+        return $this->mac_cm;
+    }
+
+    /**
+     * Generated from protobuf field <code>bytes mac_cm = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setMacCm($var)
+    {
+        GPBUtil::checkString($var, False);
+        $this->mac_cm = $var;
 
         return $this;
     }

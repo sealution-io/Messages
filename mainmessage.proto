@@ -5,121 +5,124 @@ import "google/protobuf/timestamp.proto";
 option php_namespace = "Sealution\\Messages";
 
 message SetTimeMsg {
-    google.protobuf.Timestamp date_time = 1;
+  google.protobuf.Timestamp date_time = 1;
 }
 
 message GetTimeMsg {
 }
 
 message TimeMsg {
-    google.protobuf.Timestamp date_time = 1;
+  google.protobuf.Timestamp date_time = 1;
 }
 
 message HeartBeatMsg {
-    google.protobuf.Timestamp date_time = 1;
-    bytes mac_address = 2;
+  google.protobuf.Timestamp date_time = 1;
+  bytes mac_address = 2;
 }
 
 message SetConfigMsg {
-    bytes configuration = 1;
+  bytes configuration = 1;
 }
 
 message GetConfigMsg {
 }
 
 message ConfigMsg {
-    bytes configuration = 1;
+  bytes configuration = 1;
 }
 
 message SensorDataMsg {
-    google.protobuf.Timestamp date_time = 1;
-    bytes bt_id = 2;
-    int32 rssi = 3;
-    bytes data = 4;
+  google.protobuf.Timestamp date_time = 1;
+  bytes bt_id = 2;
+  int32 rssi = 3;
+  bytes data = 4;
 }
 
 message TestThroughPutMsg{
-    bytes data_pattern = 1;
-    int32 nof_data_patterns_in_packet = 2;
-    int32 time_between_packets = 3;
-    int32 nof_packets = 4;
+  bytes data_pattern = 1;
+  int32 nof_data_patterns_in_packet = 2;
+  int32 time_between_packets = 3;
+  int32 nof_packets = 4;
 }
 
 message TestRestartDeviceMsg{
-    //int32 dummy = 1;
+  //int32 dummy = 1;
 }
 
 message TestMsg{
-    enum eMsgType{
-        MSG_TYPE_TEST_THROUGHPUT = 0;
-        MSG_TYPE_TEST_RESTART_DEVICE = 1;
-    }
-    eMsgType msg_type = 1;
-    oneof OneOfMsg {
-        TestThroughPutMsg test_throughput = 2;
-        TestRestartDeviceMsg test_restart_device = 3;
-    }
+  enum eMsgType{
+    MSG_TYPE_TEST_THROUGHPUT = 0;
+    MSG_TYPE_TEST_RESTART_DEVICE = 1;
+  }
+  eMsgType msg_type = 1;
+  oneof OneOfMsg {
+    TestThroughPutMsg test_throughput = 2;
+    TestRestartDeviceMsg test_restart_device = 3;
+  }
 }
 
 message TestThroughPutRespMsg{
-    int32 idx = 1;
-    bytes test_data = 2;
+  int32 idx = 1;
+  bytes test_data = 2;
 }
 
 message TestRespMsg{
-    enum eMsgType{
-        MSG_TYPE_TEST_THROUGHPUT_RESP = 0;
-    }
-    eMsgType msg_type = 1;
-    oneof OneofMsg {
-        TestThroughPutRespMsg test_throughput_resp = 2;
-    }
+  enum eMsgType{
+    MSG_TYPE_TEST_THROUGHPUT_RESP = 0;
+  }
+  eMsgType msg_type = 1;
+  oneof OneofMsg {
+    TestThroughPutRespMsg test_throughput_resp = 2;
+  }
 }
 
 message RMMsg{
-    enum eMsgType{
-        MSG_TYPE_SENSOR_DATA = 0;
-    }
-    google.protobuf.Timestamp date_time = 1;
-    bytes mac_address = 2;
-    eMsgType msg_type = 3;
-    oneof OneOfMsg {
-        SensorDataMsg sensor_data = 4;
-    }
+  enum eMsgType{
+    MSG_TYPE_SENSOR_DATA = 0;
+  }
+  google.protobuf.Timestamp date_time = 1;
+  bytes mac_address = 2;
+  eMsgType msg_type = 3;
+  oneof OneOfMsg {
+    SensorDataMsg sensor_data = 4;
+  }
 }
 
 message MainMsg{
-    enum eMsgType{
-        MSG_TYPE_SET_TIME = 0;
-        MSG_TYPE_GET_TIME = 1;
-        MSG_TYPE_TIME = 2;
-        MSG_TYPE_HEARTBEAT = 3;
-        MSG_TYPE_SET_CONFIG = 4;
-        MSG_TYPE_GET_CONFIG = 5;
-        MSG_TYPE_CONFIG = 6;
-        MSG_TYPE_TEST = 7;
-        MSG_TYPE_TEST_RESP = 8;
-        MSG_TYPE_RM = 9;
-    }
-    eMsgType msg_type = 1;
-    oneof oneofMsg {
-        SetTimeMsg set_time = 2;
-        GetTimeMsg get_time = 3;
-        TimeMsg time = 4;
-        HeartBeatMsg heartbeat= 5;
-        SetConfigMsg set_config = 6;
-        GetConfigMsg get_config = 7;
-        ConfigMsg config = 8;
-        TestMsg test = 9;
-        TestRespMsg test_resp = 10;
-        RMMsg rm = 11;
-    }
+  enum eMsgType{
+    MSG_TYPE_SET_TIME = 0;
+    MSG_TYPE_GET_TIME = 1;
+    MSG_TYPE_TIME = 2;
+    MSG_TYPE_HEARTBEAT = 3;
+    MSG_TYPE_SET_CONFIG = 4;
+    MSG_TYPE_GET_CONFIG = 5;
+    MSG_TYPE_CONFIG = 6;
+    MSG_TYPE_TEST = 7;
+    MSG_TYPE_TEST_RESP = 8;
+    MSG_TYPE_RM = 9;
+  }
+  eMsgType msg_type = 1;
+  oneof oneofMsg {
+    SetTimeMsg set_time = 2;
+    GetTimeMsg get_time = 3;
+    TimeMsg time = 4;
+    HeartBeatMsg heartbeat = 5;
+    SetConfigMsg set_config = 6;
+    GetConfigMsg get_config = 7;
+    ConfigMsg config = 8;
+    TestMsg test = 9;
+    TestRespMsg test_resp = 10;
+    RMMsg rm = 11;
+  }
 }
 
 message MQTTSensorDataMsg{
-    google.protobuf.Timestamp date_time_bt = 1;
-    google.protobuf.Timestamp date_time_rm = 2;
-    google.protobuf.Timestamp date_time_cm = 3;
-    int32 rssi = 4;
-    bytes data = 5;
+  google.protobuf.Timestamp date_time_bt = 1;
+  google.protobuf.Timestamp date_time_rm = 2;
+  google.protobuf.Timestamp date_time_cm = 3;
+  int32 rssi = 4;
+  bytes data = 5;
+  bytes mac_bt = 6;
+  bytes mac_rm = 7;
+  bytes mac_cm = 8;
 }
