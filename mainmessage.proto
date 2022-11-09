@@ -46,18 +46,23 @@ message TestThroughPutMsg{
 }
 
 message TestRestartDeviceMsg{
-  //int32 dummy = 1;
+}
+
+message TestMuteBTMsg{
+  bool mute = 1;
 }
 
 message TestMsg{
   enum eMsgType{
     MSG_TYPE_TEST_THROUGHPUT = 0;
     MSG_TYPE_TEST_RESTART_DEVICE = 1;
+    MSG_TYPE_TEST_MUTE_BT = 2;
   }
   eMsgType msg_type = 1;
   oneof OneOfMsg {
     TestThroughPutMsg test_throughput = 2;
     TestRestartDeviceMsg test_restart_device = 3;
+    TestMuteBTMsg test_mute_bt = 4;
   }
 }
 
@@ -106,7 +111,7 @@ message MainMsg{
     SetTimeMsg set_time = 2;
     GetTimeMsg get_time = 3;
     TimeMsg time = 4;
-    HeartBeatMsg heartbeat = 5;
+    HeartBeatMsg heartbeat= 5;
     SetConfigMsg set_config = 6;
     GetConfigMsg get_config = 7;
     ConfigMsg config = 8;

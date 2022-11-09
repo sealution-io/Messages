@@ -28,6 +28,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
      *     @type int $msg_type
      *     @type \Sealution\Messages\TestThroughPutMsg $test_throughput
      *     @type \Sealution\Messages\TestRestartDeviceMsg $test_restart_device
+     *     @type \Sealution\Messages\TestMuteBTMsg $test_mute_bt
      * }
      */
     public function __construct($data = NULL) {
@@ -97,6 +98,28 @@ class TestMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Sealution\Messages\TestRestartDeviceMsg::class);
         $this->writeOneof(3, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestMuteBTMsg test_mute_bt = 4;</code>
+     * @return \Sealution\Messages\TestMuteBTMsg
+     */
+    public function getTestMuteBt()
+    {
+        return $this->readOneof(4);
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestMuteBTMsg test_mute_bt = 4;</code>
+     * @param \Sealution\Messages\TestMuteBTMsg $var
+     * @return $this
+     */
+    public function setTestMuteBt($var)
+    {
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestMuteBTMsg::class);
+        $this->writeOneof(4, $var);
 
         return $this;
     }

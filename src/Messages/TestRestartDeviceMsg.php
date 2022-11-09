@@ -9,8 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *int32 dummy = 1;
- *
  * Generated from protobuf message <code>TestRestartDeviceMsg</code>
  */
 class TestRestartDeviceMsg extends \Google\Protobuf\Internal\Message
