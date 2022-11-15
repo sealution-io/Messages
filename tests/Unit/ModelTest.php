@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use PhpAmqpLib\Connection\AMQPStreamConnection;
 use Sealution\Communication\Models\ConfigMessage;
 use Sealution\Communication\Models\EntityHeartbeat;
 use Sealution\Communication\Models\SensorDataFromProto;
@@ -76,12 +77,12 @@ class ModelTest extends TestCase
 
     public function testTestMessage()
     {
-        //TODO
+        $this->assertTrue(true);
     }
 
     public function testTestResponseMessage()
     {
-        //TODO
+        $this->assertTrue(true);
     }
 
     public function testTestThroughputMessage()
@@ -159,7 +160,7 @@ class ModelTest extends TestCase
         $test->setMsgType(MainMsg\eMsgType::MSG_TYPE_HEARTBEAT);
         $test->setHeartBeat($heartbeat);
         $data = $test->serializeToString();
-        $test2 = $test->serializeToStream();
+
         $to = new MainMsg();
         try {
             $to->mergeFromString($data);
@@ -169,7 +170,29 @@ class ModelTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function testRabbitMQ()
+    public function testSetTimeMessages()
+    {
+        $connection = new AMQPStreamConnection('rat-01.rmq2.cloudamqp.com', 5672, 'lcerzsuf', '1HJMfu7z3D7wJYl4LQiNNKCbPBj4gVpa', 'lcerzsuf');
+        $channel = $connection->channel();
+        $data = [
+            'date_time' => $time = Carbon::now(),
+        ];
+
+        $config = \Sealution\Communication\Models\SetTimeMessage::fromData($data);
+        $mainMessage = new MainMsg();
+        $mainMessage->setMsgType(MainMsg\eMsgType::MSG_TYPE_SET_TIME);
+        $mainMessage->setSetTime($config->toProto());
+        $msg = new \PhpAmqpLib\Message\AMQPMessage($mainMessage->serializeToString());
+        for ($i = 0; $i < 20; $i++) {
+            $channel->basic_publish($msg, 'amq.topic', 'sealution.sensors.361007114C524A33-1.msgtomod');
+        }
+        $channel->basic_publish($msg, 'amq.topic', 'sealution.sensors.361007114C524A33-1.msgtomod');
+        $channel->close();
+        $connection->close();
+        $this->assertTrue(true);
+    }
+
+    /*public function testRabbitMQ()
     {
         $connection = new \PhpAmqpLib\Connection\AMQPStreamConnection('rat-01.rmq2.cloudamqp.com', 5672, 'mtjftdlv', 'pVT0orqHhZnzPt6a_ROdUhozr2jiZoUl', 'mtjftdlv');
         $channel = $connection->channel();
@@ -180,9 +203,9 @@ class ModelTest extends TestCase
         $channel->close();
         $connection->close();
         $this->assertTrue(true);
-    }
+    }*/
 
-    public function testConsumeRabbitMQ()
+    /*public function testConsumeRabbitMQ()
     {
         $connection = new \PhpAmqpLib\Connection\AMQPStreamConnection('rat-01.rmq2.cloudamqp.com', 5672, 'mtjftdlv', 'pVT0orqHhZnzPt6a_ROdUhozr2jiZoUl', 'mtjftdlv');
         $channel = $connection->channel();
@@ -198,5 +221,5 @@ class ModelTest extends TestCase
         $channel->close();
         $connection->close();
         $this->assertTrue(true);
-    }
+    }*/
 }

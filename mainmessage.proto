@@ -119,6 +119,7 @@ message MainMsg{
     TestRespMsg test_resp = 10;
     RMMsg rm = 11;
   }
+  int32 msg_id = 12;
 }
 
 message MQTTSensorDataMsg{

@@ -17,6 +17,10 @@ class MainMsg extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.MainMsg.eMsgType msg_type = 1;</code>
      */
     protected $msg_type = 0;
+    /**
+     * Generated from protobuf field <code>int32 msg_id = 12;</code>
+     */
+    protected $msg_id = 0;
     protected $oneofMsg;
 
     /**
@@ -36,6 +40,7 @@ class MainMsg extends \Google\Protobuf\Internal\Message
      *     @type \Sealution\Messages\TestMsg $test
      *     @type \Sealution\Messages\TestRespMsg $test_resp
      *     @type \Sealution\Messages\RMMsg $rm
+     *     @type int $msg_id
      * }
      */
     public function __construct($data = NULL) {
@@ -281,6 +286,28 @@ class MainMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Sealution\Messages\RMMsg::class);
         $this->writeOneof(11, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 msg_id = 12;</code>
+     * @return int
+     */
+    public function getMsgId()
+    {
+        return $this->msg_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 msg_id = 12;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setMsgId($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->msg_id = $var;
 
         return $this;
     }
