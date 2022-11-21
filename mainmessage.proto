@@ -69,6 +69,8 @@ message TestMsg{
 message TestThroughPutRespMsg{
   int32 idx = 1;
   bytes test_data = 2;
+  google.protobuf.Timestamp date_time_rm = 3;
+  google.protobuf.Timestamp date_time_cm = 4;
 }
 
 message TestRespMsg{

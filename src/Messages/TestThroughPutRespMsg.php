@@ -21,6 +21,14 @@ class TestThroughPutRespMsg extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bytes test_data = 2;</code>
      */
     protected $test_data = '';
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_rm = 3;</code>
+     */
+    protected $date_time_rm = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_cm = 4;</code>
+     */
+    protected $date_time_cm = null;
 
     /**
      * Constructor.
@@ -30,6 +38,8 @@ class TestThroughPutRespMsg extends \Google\Protobuf\Internal\Message
      *
      *     @type int $idx
      *     @type string $test_data
+     *     @type \Google\Protobuf\Timestamp $date_time_rm
+     *     @type \Google\Protobuf\Timestamp $date_time_cm
      * }
      */
     public function __construct($data = NULL) {
@@ -77,6 +87,50 @@ class TestThroughPutRespMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, False);
         $this->test_data = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_rm = 3;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getDateTimeRm()
+    {
+        return $this->date_time_rm;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_rm = 3;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setDateTimeRm($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->date_time_rm = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_cm = 4;</code>
+     * @return \Google\Protobuf\Timestamp
+     */
+    public function getDateTimeCm()
+    {
+        return $this->date_time_cm;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_cm = 4;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setDateTimeCm($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->date_time_cm = $var;
 
         return $this;
     }
