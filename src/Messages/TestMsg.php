@@ -29,6 +29,8 @@ class TestMsg extends \Google\Protobuf\Internal\Message
      *     @type \Sealution\Messages\TestThroughPutMsg $test_throughput
      *     @type \Sealution\Messages\TestRestartDeviceMsg $test_restart_device
      *     @type \Sealution\Messages\TestMuteBTMsg $test_mute_bt
+     *     @type \Sealution\Messages\TestStatsMsg $test_stats
+     *     @type \Sealution\Messages\TestClrStatsMsg $test_clr_stats
      * }
      */
     public function __construct($data = NULL) {
@@ -120,6 +122,50 @@ class TestMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Sealution\Messages\TestMuteBTMsg::class);
         $this->writeOneof(4, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestStatsMsg test_stats = 5;</code>
+     * @return \Sealution\Messages\TestStatsMsg
+     */
+    public function getTestStats()
+    {
+        return $this->readOneof(5);
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestStatsMsg test_stats = 5;</code>
+     * @param \Sealution\Messages\TestStatsMsg $var
+     * @return $this
+     */
+    public function setTestStats($var)
+    {
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestStatsMsg::class);
+        $this->writeOneof(5, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestClrStatsMsg test_clr_stats = 6;</code>
+     * @return \Sealution\Messages\TestClrStatsMsg
+     */
+    public function getTestClrStats()
+    {
+        return $this->readOneof(6);
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestClrStatsMsg test_clr_stats = 6;</code>
+     * @param \Sealution\Messages\TestClrStatsMsg $var
+     * @return $this
+     */
+    public function setTestClrStats($var)
+    {
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestClrStatsMsg::class);
+        $this->writeOneof(6, $var);
 
         return $this;
     }

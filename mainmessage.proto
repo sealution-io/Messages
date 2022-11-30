@@ -52,17 +52,33 @@ message TestMuteBTMsg{
   bool mute = 1;
 }
 
+message TestStatsMsg{
+}
+
+message TestClrStatsMsg{
+}
+
+message TestStatsRespMsg{
+  int32 msgRx = 1;
+  int32 msgTx = 2;
+  int32 msgErrors = 3;
+}
+
 message TestMsg{
   enum eMsgType{
     MSG_TYPE_TEST_THROUGHPUT = 0;
     MSG_TYPE_TEST_RESTART_DEVICE = 1;
     MSG_TYPE_TEST_MUTE_BT = 2;
+    MSG_TYPE_TEST_STATS = 3;
+    MSG_TYPE_TEST_CLR_STATS = 4;
   }
   eMsgType msg_type = 1;
   oneof OneOfMsg {
     TestThroughPutMsg test_throughput = 2;
     TestRestartDeviceMsg test_restart_device = 3;
     TestMuteBTMsg test_mute_bt = 4;
+    TestStatsMsg test_stats = 5;
+    TestClrStatsMsg test_clr_stats = 6;
   }
 }
 
@@ -76,10 +92,13 @@ message TestThroughPutRespMsg{
 message TestRespMsg{
   enum eMsgType{
     MSG_TYPE_TEST_THROUGHPUT_RESP = 0;
+    MSG_TYPE_TEST_STATS_RESP = 1;
+
   }
   eMsgType msg_type = 1;
   oneof OneofMsg {
     TestThroughPutRespMsg test_throughput_resp = 2;
+    TestStatsRespMsg test_stats_resp = 3;
   }
 }
 

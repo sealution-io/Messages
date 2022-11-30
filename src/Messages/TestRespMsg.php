@@ -27,6 +27,7 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
      *
      *     @type int $msg_type
      *     @type \Sealution\Messages\TestThroughPutRespMsg $test_throughput_resp
+     *     @type \Sealution\Messages\TestStatsRespMsg $test_stats_resp
      * }
      */
     public function __construct($data = NULL) {
@@ -74,6 +75,28 @@ class TestRespMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Sealution\Messages\TestThroughPutRespMsg::class);
         $this->writeOneof(2, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestStatsRespMsg test_stats_resp = 3;</code>
+     * @return \Sealution\Messages\TestStatsRespMsg
+     */
+    public function getTestStatsResp()
+    {
+        return $this->readOneof(3);
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestStatsRespMsg test_stats_resp = 3;</code>
+     * @param \Sealution\Messages\TestStatsRespMsg $var
+     * @return $this
+     */
+    public function setTestStatsResp($var)
+    {
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestStatsRespMsg::class);
+        $this->writeOneof(3, $var);
 
         return $this;
     }

@@ -23,11 +23,21 @@ class eMsgType
      * Generated from protobuf enum <code>MSG_TYPE_TEST_MUTE_BT = 2;</code>
      */
     const MSG_TYPE_TEST_MUTE_BT = 2;
+    /**
+     * Generated from protobuf enum <code>MSG_TYPE_TEST_STATS = 3;</code>
+     */
+    const MSG_TYPE_TEST_STATS = 3;
+    /**
+     * Generated from protobuf enum <code>MSG_TYPE_TEST_CLR_STATS = 4;</code>
+     */
+    const MSG_TYPE_TEST_CLR_STATS = 4;
 
     private static $valueToName = [
         self::MSG_TYPE_TEST_THROUGHPUT => 'MSG_TYPE_TEST_THROUGHPUT',
         self::MSG_TYPE_TEST_RESTART_DEVICE => 'MSG_TYPE_TEST_RESTART_DEVICE',
         self::MSG_TYPE_TEST_MUTE_BT => 'MSG_TYPE_TEST_MUTE_BT',
+        self::MSG_TYPE_TEST_STATS => 'MSG_TYPE_TEST_STATS',
+        self::MSG_TYPE_TEST_CLR_STATS => 'MSG_TYPE_TEST_CLR_STATS',
     ];
 
     public static function name($value)

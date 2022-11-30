@@ -15,9 +15,14 @@ class eMsgType
      * Generated from protobuf enum <code>MSG_TYPE_TEST_THROUGHPUT_RESP = 0;</code>
      */
     const MSG_TYPE_TEST_THROUGHPUT_RESP = 0;
+    /**
+     * Generated from protobuf enum <code>MSG_TYPE_TEST_STATS_RESP = 1;</code>
+     */
+    const MSG_TYPE_TEST_STATS_RESP = 1;
 
     private static $valueToName = [
         self::MSG_TYPE_TEST_THROUGHPUT_RESP => 'MSG_TYPE_TEST_THROUGHPUT_RESP',
+        self::MSG_TYPE_TEST_STATS_RESP => 'MSG_TYPE_TEST_STATS_RESP',
     ];
 
     public static function name($value)
