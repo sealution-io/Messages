@@ -16,7 +16,7 @@ class TimeMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      */
-    protected $date_time = null;
+    private $date_time = null;
 
     /**
      * Constructor.

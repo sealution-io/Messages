@@ -16,7 +16,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.TestMsg.eMsgType msg_type = 1;</code>
      */
-    protected $msg_type = 0;
+    private $msg_type = 0;
     protected $OneOfMsg;
 
     /**
@@ -31,6 +31,7 @@ class TestMsg extends \Google\Protobuf\Internal\Message
      *     @type \Sealution\Messages\TestMuteBTMsg $test_mute_bt
      *     @type \Sealution\Messages\TestStatsMsg $test_stats
      *     @type \Sealution\Messages\TestClrStatsMsg $test_clr_stats
+     *     @type \Sealution\Messages\TestThroughPutWithStatsMsg $test_throughput_with_stats
      * }
      */
     public function __construct($data = NULL) {
@@ -166,6 +167,28 @@ class TestMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Sealution\Messages\TestClrStatsMsg::class);
         $this->writeOneof(6, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestThroughPutWithStatsMsg test_throughput_with_stats = 7;</code>
+     * @return \Sealution\Messages\TestThroughPutWithStatsMsg
+     */
+    public function getTestThroughputWithStats()
+    {
+        return $this->readOneof(7);
+    }
+
+    /**
+     * Generated from protobuf field <code>.TestThroughPutWithStatsMsg test_throughput_with_stats = 7;</code>
+     * @param \Sealution\Messages\TestThroughPutWithStatsMsg $var
+     * @return $this
+     */
+    public function setTestThroughputWithStats($var)
+    {
+        GPBUtil::checkMessage($var, \Sealution\Messages\TestThroughPutWithStatsMsg::class);
+        $this->writeOneof(7, $var);
 
         return $this;
     }

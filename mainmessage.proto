@@ -45,6 +45,15 @@ message TestThroughPutMsg{
   int32 nof_packets = 4;
 }
 
+message TestThroughPutWithStatsMsg{
+  bytes data_pattern = 1;
+  int32 nof_data_patterns_in_packet = 2;
+  int32 time_between_packets = 3;
+  int32 nof_packets = 4;
+  int32 room_short_id = 5;
+}
+
+
 message TestRestartDeviceMsg{
 }
 
@@ -71,6 +80,7 @@ message TestMsg{
     MSG_TYPE_TEST_MUTE_BT = 2;
     MSG_TYPE_TEST_STATS = 3;
     MSG_TYPE_TEST_CLR_STATS = 4;
+    MSG_TYPE_TEST_THROUGHPUT_WITH_STATS = 5;
   }
   eMsgType msg_type = 1;
   oneof OneOfMsg {
@@ -79,6 +89,7 @@ message TestMsg{
     TestMuteBTMsg test_mute_bt = 4;
     TestStatsMsg test_stats = 5;
     TestClrStatsMsg test_clr_stats = 6;
+    TestThroughPutWithStatsMsg test_throughput_with_stats = 7;
   }
 }
 
@@ -89,16 +100,25 @@ message TestThroughPutRespMsg{
   google.protobuf.Timestamp date_time_cm = 4;
 }
 
+message TestThroughPutWithStatsRespMsg{
+  int32 idx = 1;
+  int32 received_packets = 2;
+  int32 received_bytes = 3;
+  int32 first_packet_tick = 4;
+  int32 last_packet_tick = 5;
+}
+
 message TestRespMsg{
   enum eMsgType{
     MSG_TYPE_TEST_THROUGHPUT_RESP = 0;
     MSG_TYPE_TEST_STATS_RESP = 1;
-
+    MSG_TYPE_TEST_THROUGHPUT_WITH_STATS_RESP = 2;
   }
   eMsgType msg_type = 1;
   oneof OneofMsg {
     TestThroughPutRespMsg test_throughput_resp = 2;
     TestStatsRespMsg test_stats_resp = 3;
+    TestThroughPutWithStatsRespMsg test_throughput_with_stats_resp = 4;
   }
 }
 

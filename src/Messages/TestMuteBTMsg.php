@@ -16,7 +16,7 @@ class TestMuteBTMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bool mute = 1;</code>
      */
-    protected $mute = false;
+    private $mute = false;
 
     /**
      * Constructor.

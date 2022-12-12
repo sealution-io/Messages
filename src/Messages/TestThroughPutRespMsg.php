@@ -16,19 +16,19 @@ class TestThroughPutRespMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int32 idx = 1;</code>
      */
-    protected $idx = 0;
+    private $idx = 0;
     /**
      * Generated from protobuf field <code>bytes test_data = 2;</code>
      */
-    protected $test_data = '';
+    private $test_data = '';
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_rm = 3;</code>
      */
-    protected $date_time_rm = null;
+    private $date_time_rm = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_cm = 4;</code>
      */
-    protected $date_time_cm = null;
+    private $date_time_cm = null;
 
     /**
      * Constructor.

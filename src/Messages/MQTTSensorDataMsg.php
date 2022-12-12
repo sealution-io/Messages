@@ -16,35 +16,35 @@ class MQTTSensorDataMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_bt = 1;</code>
      */
-    protected $date_time_bt = null;
+    private $date_time_bt = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_rm = 2;</code>
      */
-    protected $date_time_rm = null;
+    private $date_time_rm = null;
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time_cm = 3;</code>
      */
-    protected $date_time_cm = null;
+    private $date_time_cm = null;
     /**
      * Generated from protobuf field <code>int32 rssi = 4;</code>
      */
-    protected $rssi = 0;
+    private $rssi = 0;
     /**
      * Generated from protobuf field <code>bytes data = 5;</code>
      */
-    protected $data = '';
+    private $data = '';
     /**
      * Generated from protobuf field <code>bytes mac_bt = 6;</code>
      */
-    protected $mac_bt = '';
+    private $mac_bt = '';
     /**
      * Generated from protobuf field <code>bytes mac_rm = 7;</code>
      */
-    protected $mac_rm = '';
+    private $mac_rm = '';
     /**
      * Generated from protobuf field <code>bytes mac_cm = 8;</code>
      */
-    protected $mac_cm = '';
+    private $mac_cm = '';
 
     /**
      * Constructor.

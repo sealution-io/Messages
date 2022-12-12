@@ -16,11 +16,11 @@ class HeartBeatMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      */
-    protected $date_time = null;
+    private $date_time = null;
     /**
      * Generated from protobuf field <code>bytes mac_address = 2;</code>
      */
-    protected $mac_address = '';
+    private $mac_address = '';
 
     /**
      * Constructor.

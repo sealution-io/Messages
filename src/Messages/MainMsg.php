@@ -16,11 +16,11 @@ class MainMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.MainMsg.eMsgType msg_type = 1;</code>
      */
-    protected $msg_type = 0;
+    private $msg_type = 0;
     /**
      * Generated from protobuf field <code>int32 msg_id = 12;</code>
      */
-    protected $msg_id = 0;
+    private $msg_id = 0;
     protected $oneofMsg;
 
     /**

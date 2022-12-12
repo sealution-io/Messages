@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>TestThroughPutMsg</code>
+ * Generated from protobuf message <code>TestThroughPutWithStatsMsg</code>
  */
-class TestThroughPutMsg extends \Google\Protobuf\Internal\Message
+class TestThroughPutWithStatsMsg extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>bytes data_pattern = 1;</code>
@@ -29,6 +29,10 @@ class TestThroughPutMsg extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 nof_packets = 4;</code>
      */
     private $nof_packets = 0;
+    /**
+     * Generated from protobuf field <code>int32 room_short_id = 5;</code>
+     */
+    private $room_short_id = 0;
 
     /**
      * Constructor.
@@ -40,6 +44,7 @@ class TestThroughPutMsg extends \Google\Protobuf\Internal\Message
      *     @type int $nof_data_patterns_in_packet
      *     @type int $time_between_packets
      *     @type int $nof_packets
+     *     @type int $room_short_id
      * }
      */
     public function __construct($data = NULL) {
@@ -131,6 +136,28 @@ class TestThroughPutMsg extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->nof_packets = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 room_short_id = 5;</code>
+     * @return int
+     */
+    public function getRoomShortId()
+    {
+        return $this->room_short_id;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 room_short_id = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRoomShortId($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->room_short_id = $var;
 
         return $this;
     }

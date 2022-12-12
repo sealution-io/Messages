@@ -4,8 +4,6 @@
 
 namespace Sealution\Messages\TestMsg;
 
-use UnexpectedValueException;
-
 /**
  * Protobuf type <code>TestMsg.eMsgType</code>
  */
@@ -31,34 +29,10 @@ class eMsgType
      * Generated from protobuf enum <code>MSG_TYPE_TEST_CLR_STATS = 4;</code>
      */
     const MSG_TYPE_TEST_CLR_STATS = 4;
-
-    private static $valueToName = [
-        self::MSG_TYPE_TEST_THROUGHPUT => 'MSG_TYPE_TEST_THROUGHPUT',
-        self::MSG_TYPE_TEST_RESTART_DEVICE => 'MSG_TYPE_TEST_RESTART_DEVICE',
-        self::MSG_TYPE_TEST_MUTE_BT => 'MSG_TYPE_TEST_MUTE_BT',
-        self::MSG_TYPE_TEST_STATS => 'MSG_TYPE_TEST_STATS',
-        self::MSG_TYPE_TEST_CLR_STATS => 'MSG_TYPE_TEST_CLR_STATS',
-    ];
-
-    public static function name($value)
-    {
-        if (!isset(self::$valueToName[$value])) {
-            throw new UnexpectedValueException(sprintf(
-                    'Enum %s has no name defined for value %s', __CLASS__, $value));
-        }
-        return self::$valueToName[$value];
-    }
-
-
-    public static function value($name)
-    {
-        $const = __CLASS__ . '::' . strtoupper($name);
-        if (!defined($const)) {
-            throw new UnexpectedValueException(sprintf(
-                    'Enum %s has no value defined for name %s', __CLASS__, $name));
-        }
-        return constant($const);
-    }
+    /**
+     * Generated from protobuf enum <code>MSG_TYPE_TEST_THROUGHPUT_WITH_STATS = 5;</code>
+     */
+    const MSG_TYPE_TEST_THROUGHPUT_WITH_STATS = 5;
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

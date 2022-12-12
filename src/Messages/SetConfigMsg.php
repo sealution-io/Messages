@@ -16,7 +16,7 @@ class SetConfigMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>bytes configuration = 1;</code>
      */
-    protected $configuration = '';
+    private $configuration = '';
 
     /**
      * Constructor.

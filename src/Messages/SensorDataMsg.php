@@ -16,19 +16,19 @@ class SensorDataMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp date_time = 1;</code>
      */
-    protected $date_time = null;
+    private $date_time = null;
     /**
      * Generated from protobuf field <code>bytes bt_id = 2;</code>
      */
-    protected $bt_id = '';
+    private $bt_id = '';
     /**
      * Generated from protobuf field <code>int32 rssi = 3;</code>
      */
-    protected $rssi = 0;
+    private $rssi = 0;
     /**
      * Generated from protobuf field <code>bytes data = 4;</code>
      */
-    protected $data = '';
+    private $data = '';
 
     /**
      * Constructor.

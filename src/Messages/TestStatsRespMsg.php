@@ -16,15 +16,15 @@ class TestStatsRespMsg extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>int32 msgRx = 1;</code>
      */
-    protected $msgRx = 0;
+    private $msgRx = 0;
     /**
      * Generated from protobuf field <code>int32 msgTx = 2;</code>
      */
-    protected $msgTx = 0;
+    private $msgTx = 0;
     /**
      * Generated from protobuf field <code>int32 msgErrors = 3;</code>
      */
-    protected $msgErrors = 0;
+    private $msgErrors = 0;
 
     /**
      * Constructor.
