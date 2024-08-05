@@ -2,8 +2,6 @@ syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
 
-option php_namespace = "Sealution\\Messages";
-
 message SetTimeMsg {
   google.protobuf.Timestamp date_time = 1;
 }
@@ -20,11 +18,44 @@ message HeartBeatMsg {
   bytes mac_address = 2;
 }
 
+message GetConfigGatewayGlobalMsg{
+  bytes gateway_name = 1;
+  uint32 gateway_powerline_connection_interval = 2;
+  uint32 gateway_powerline_connection_timeout = 3;
+  bytes gateway_location = 4;
+  uint32 gateway_filter_configuration = 5;
+}
+
+message GetConfigSensorConfigMsg{
+  uint32 sensor_config_index = 1;
+  bytes sensor_name = 2;
+  uint32 sensor_type = 3;
+  bytes mac_address = 4;
+  uint32 receive_period = 5;
+  bytes extra_config = 6;
+  uint32 enable = 7;
+}
+
+message GetConfigStatusConfigMsg{
+  bytes mac_address = 1;
+  int32 battery_level = 2;
+}
+
 message SetConfigMsg {
-  bytes configuration = 1;
 }
 
 message GetConfigMsg {
+  enum eMsgType{
+    MSG_TYPE_CONFIG_GATEWAY_GLOBAL = 0;
+    MSG_TYPE_CONFIG_SENSOR_CONFIG = 1;
+    MSG_TYPE_CONFIG_STATUS = 2;
+  }
+  eMsgType msg_type = 1;
+  oneof OneOfMsg {
+    GetConfigGatewayGlobalMsg config_gateway_global = 2;
+    GetConfigSensorConfigMsg config_sensor_config = 3;
+    GetConfigStatusConfigMsg config_status = 4;
+  }
 }
 
 message ConfigMsg {
@@ -34,8 +65,20 @@ message ConfigMsg {
 message SensorDataMsg {
   google.protobuf.Timestamp date_time = 1;
   bytes bt_id = 2;
-  int32 rssi = 3;
-  bytes data = 4;
+  int32 rssi = 4;
+  bytes data = 5;
+}
+
+message BTChipDataMsg {
+  enum eMsgType{
+    MSG_TYPE_BTCHIP_SENSORDATA = 0;
+    MSG_TYPE_BTCHIP_GET_CONFIG = 1;
+  }
+  eMsgType msg_type = 1;
+  oneof OneOfMsg {
+    SensorDataMsg sensordata = 3;
+    GetConfigMsg getconfigmsg = 4;
+  }
 }
 
 message TestThroughPutMsg{
@@ -172,4 +215,6 @@ message MQTTSensorDataMsg{
   bytes mac_bt = 6;
   bytes mac_rm = 7;
   bytes mac_cm = 8;
+
 }
+
